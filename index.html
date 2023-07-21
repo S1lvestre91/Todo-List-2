@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Todo List</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./src/styles/style.css">
+</head>
+
+<body>
+  <!--HeaderApplication-->
+  <header class="cadecalho">
+    <div class="logo">
+      <img src="./src/img/logo.png" alt="">
+    </div>
+  </header>
+  <main>
+    <section class="secao-form">
+      <form id="formulario" class="form" action="" method="" accept-charset="utf-8">
+        <div class="itens-form">
+          <label for="tarefa">Descrição</label>
+          <input id="tarefa" type="text" data-index="new">
+        </div>
+        
+        <div id="dt-inicio" class="itens-form">
+          <label for="dt-ini">Inicio</label>
+          <input id="dt-ini" type="date">
+        </div>
+        <div class="itens-form">
+          <label for="dt-fim">Fim</label>
+          <input id="dt-fim" type="date">
+        </div>
+        <input id="HdId" type="hidden">
+        <button id="btn" type="submit">Adicionar</button>
+      </form>
+    </section>
+    <section class="secao-list">
+      
+          <table id="tbl" class="tabela">
+            <thead>
+              <tr class="header-table">
+                <th class="">Tarefa</th>
+                <th class="">Inicio</th>
+                <th class="">Fim</th>
+                <th class="">Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="t-body">
+              
+            </tbody>
+      </table>
+    </section>
+    <footer class="roda-pe">
+      <section class="footer">
+        <p>Author: Francisco Silvestre</p>
+        <a href="mailto:cursos.programacao1922@gmail.com">Email:cursos.programacao1922@gmail.com</a>
+        
+        <p>&copy;Direitos ao Autor: Francisco Silvestre</p>
+      </section>
+      
+    </footer>
+  </main>
+  <!-- Project -->
+  <script src="./src/scripts/main.js"></script>
+</body>
+</html>
