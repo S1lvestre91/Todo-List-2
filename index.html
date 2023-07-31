@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="./src/img/icon.png">
 
   <title>Todo List</title>
   
@@ -31,7 +32,7 @@
         
         <div id="dt-inicio" class="itens-form">
           <label for="dt-ini">Inicio</label>
-          <input id="dt-ini" type="date">
+          <input id="dt-ini" type="date" disabled>
         </div>
         <div class="itens-form">
           <label for="dt-fim">Fim</label>
@@ -70,5 +71,18 @@
   </main>
   <!-- Project -->
   <script src="./src/scripts/main.js"></script>
+  <script src="./src/scripts/serviceWorker.js"></script>
+  
+  <script>
+    if('serviceWoker' in navigator){
+      window.addEventListener('load', event =>{
+        navigator.serviceWorker.register('./src/scripts/serviceWorker.js').then( registro =>{
+          console.log("Registro realizado com suceso", registro)
+        }).catch(error =>{
+          console.log("Erro ao registrar", error)
+        })
+      })
+    }
+  </script>
 </body>
 </html>
